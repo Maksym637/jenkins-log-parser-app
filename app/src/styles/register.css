@@ -1,14 +1,15 @@
-.login-body {
+.register-body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-.login-container {
+.register-container {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   padding: 70px;
+  width: 400px;
   text-align: center;
 }
 
@@ -18,7 +19,7 @@ h2 {
   font-family: serif;
 }
 
-.login-line {
+.register-line {
   width: 95%;
   height: 1px;
   background-color: #2f7a71;
@@ -26,8 +27,7 @@ h2 {
   border-radius: 1px;
 }
 
-.login-input[type="text"],
-.login-input[type="password"] {
+.register-input {
   width: 90%;
   padding: 10px;
   margin-bottom: 15px;
@@ -38,19 +38,17 @@ h2 {
   font-family: serif;
 }
 
-.login-input[type="text"]::placeholder,
-.login-input[type="password"]::placeholder {
+.register-input::placeholder {
   font-family: serif;
 }
 
-.login-input[type="text"]:focus,
-.login-input[type="password"]:focus {
+.register-input:focus {
   border-color: #1f514b;
   outline: none;
   font-family: serif;
 }
 
-.login-button {
+.register-button {
   width: 90%;
   padding: 10px;
   background-color: #2f7a71;
@@ -62,6 +60,22 @@ h2 {
   font-family: serif;
 }
 
-.login-button:hover {
+.register-button:hover {
   background-color: #1f514b;
+}
+
+.register-link {
+  display: block;
+  margin-top: 15px;
+  color: #163430;
+  text-decoration: none;
+  font-family: serif;
+}
+
+.register-link:hover {
+  color: #1f514b;
+}
+
+.login-redirection {
+  padding: 10px;
 }

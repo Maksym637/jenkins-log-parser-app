@@ -45,9 +45,11 @@ const Login = ({ setIsAuthenticated }) => {
     <div className="login-body">
       <div className="login-container">
         <h2>Sign In to the system</h2>
+        <div className="login-line"></div>
         <form onSubmit={handleLogin}>
           <input
             type="text"
+            className="login-input"
             value={username}
             onChange={(entity) => setUsername(entity.target.value)}
             placeholder="Username"
@@ -55,12 +57,18 @@ const Login = ({ setIsAuthenticated }) => {
           />
           <input
             type="password"
+            className="login-input"
             value={password}
             onChange={(entity) => setPassword(entity.target.value)}
             placeholder="Password"
             required
           />
-          <button type="submit">Sign in</button>
+          <button className="login-button" type="submit">
+            Sign in
+          </button>
+          <p>
+            Don't have an account? <a href="/register">Register here</a>
+          </p>
         </form>
       </div>
     </div>

@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Login from "./components/login";
 import Home from "./components/home";
+import Register from "./components/register";
 import "./styles/global.css";
 
 function App() {
@@ -20,6 +21,13 @@ function App() {
             <Redirect to="/home" />
           ) : (
             <Login setIsAuthenticated={setIsAuthenticated} />
+          )}
+        </Route>
+        <Route path="/register">
+          {isAuthenticated ? (
+            <Redirect to="/home" />
+          ) : (
+            <Register setIsAuthenticated={setIsAuthenticated} />
           )}
         </Route>
         <Route path="/home">
