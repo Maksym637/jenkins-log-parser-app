@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  border-bottom: 1px solid #2f7a71;
+}
+
+.nav-left {
+  flex: 1;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #163430;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: serif;
+}
+
+.nav-link.button {
+  cursor: pointer;
+  color: #295e56;
+  font-family: serif;
+}
+
+.vertical-bar {
+  margin: 0 10px;
+  border-left: 1px solid #2f7a71;
+  height: 55px;
+}

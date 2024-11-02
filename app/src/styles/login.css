@@ -1,0 +1,57 @@
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 70px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #163430;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: serif;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  font-family: serif;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #1f514b;
+  outline: none;
+  font-family: serif;
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  background-color: #2f7a71;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: serif;
+}
+
+button:hover {
+  background-color: #1f514b;
+}
