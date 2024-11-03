@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -8,10 +9,21 @@ import {
 import Login from "./components/login";
 import Home from "./components/home";
 import Register from "./components/register";
+import Profile from "./components/profile";
 import "./styles/global.css";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    Boolean(window.localStorage.getItem("accessToken"))
+  );
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      window.localStorage.setItem("isAuthenticated", "true");
+    } else {
+      window.localStorage.removeItem("isAuthenticated");
+    }
+  }, [isAuthenticated]);
 
   return (
     <Router>
@@ -33,6 +45,13 @@ function App() {
         <Route path="/home">
           {isAuthenticated ? (
             <Home setIsAuthenticated={setIsAuthenticated} />
+          ) : (
+            <Redirect to="/login" />
+          )}
+        </Route>
+        <Route path="/profile">
+          {isAuthenticated ? (
+            <Profile setIsAuthenticated={setIsAuthenticated} />
           ) : (
             <Redirect to="/login" />
           )}

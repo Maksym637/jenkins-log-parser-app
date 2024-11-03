@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import "../styles/home.css";
 
 const Home = ({ setIsAuthenticated }) => {
@@ -15,18 +15,18 @@ const Home = ({ setIsAuthenticated }) => {
     <div>
       <nav className="navbar">
         <div className="nav-left">
-          <a href="/jenkins-histories" className="nav-link">
+          <Link to="/jenkins-histories" className="nav-link">
             Jenkins Histories
-          </a>
+          </Link>
         </div>
         <div className="nav-right">
           <a href="/" className="nav-link button" onClick={handleLogout}>
             Log Out
           </a>
           <div className="vertical-bar" />
-          <a href="/profile" className="nav-link">
+          <Link to="/profile" className="nav-link">
             Profile
-          </a>
+          </Link>
         </div>
       </nav>
     </div>
