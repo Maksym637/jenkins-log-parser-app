@@ -34,3 +34,77 @@
   border-left: 1px solid #2f7a71;
   height: 55px;
 }
+
+.log-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.log-input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 85%;
+}
+
+.log-input {
+  width: 85%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  font-family: serif;
+  margin-right: 25px;
+}
+
+.log-input::placeholder {
+  font-family: serif;
+}
+
+.log-input:focus {
+  border-color: #1f514b;
+  outline: none;
+  font-family: serif;
+}
+
+.log-button {
+  padding: 10px 20px;
+  background-color: #2f7a71;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: serif;
+}
+
+.log-button:hover {
+  background-color: #1f514b;
+}
+
+.loading-message {
+  color: #163430;
+  font-size: 25px;
+  font-family: serif;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pie-chart-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.chart-container canvas {
+  max-width: 600px;
+  height: 600px;
+}

@@ -38,11 +38,12 @@ const Register = ({ setIsAuthenticated }) => {
           access_token: `Basic ${response.data.hashed_credentials}`,
         };
         window.localStorage.setItem("accessToken", JSON.stringify(accessToken));
-
+        window.localStorage.setItem("isAuthenticated", "true");
+  
         setUserLog(accessToken);
         setIsAuthenticated(true);
 
-        alert("You are successfully registered in the system");
+        alert("You are successfully registered to the system");
 
         history.push("/home");
       })
