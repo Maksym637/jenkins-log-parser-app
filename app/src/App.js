@@ -10,6 +10,7 @@ import Login from "./components/login";
 import Home from "./components/home";
 import Register from "./components/register";
 import Profile from "./components/profile";
+import JenkinsHistory from "./components/jenkins-history";
 import "./styles/global.css";
 
 function App() {
@@ -52,6 +53,13 @@ function App() {
         <Route path="/profile">
           {isAuthenticated ? (
             <Profile setIsAuthenticated={setIsAuthenticated} />
+          ) : (
+            <Redirect to="/login" />
+          )}
+        </Route>
+        <Route path="/jenkins-histories">
+          {isAuthenticated ? (
+            <JenkinsHistory setIsAuthenticated={setIsAuthenticated} />
           ) : (
             <Redirect to="/login" />
           )}

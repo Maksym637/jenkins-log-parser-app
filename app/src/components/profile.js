@@ -76,7 +76,7 @@ const Profile = ({ setIsAuthenticated }) => {
   return (
     <div>
       <h2 className="profile-h2">Personal Infomation</h2>
-      <div className="home-link" onClick={() => history.push("/")}>
+      <div className="home-link" onClick={() => history.push("/home")}>
         <h2>Home</h2>
       </div>
       <div className="profile-info">
